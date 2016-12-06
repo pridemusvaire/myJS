@@ -27435,7 +27435,7 @@
 	        value: function addToLearningPath(event) {
 	            var title = this.props.course.Title;
 	            var type = this.props.course.CourseType;
-	            var desc = this.course.props.Desc;
+	            var desc = this.props.course.Desc;
 	            var courseId = this.props.course.ID;
 
 	            this.props.addToLearningPath(title, desc, type, courseId);
@@ -27614,7 +27614,7 @@
 	        value: function addToLearningPath(event) {
 	            var title = this.props.course.Title;
 	            var type = this.props.course.CourseType;
-	            var desc = this.course.props.Desc;
+	            var desc = this.props.course.Desc;
 	            var courseId = this.props.course.ID;
 
 	            this.props.addToLearningPath(title, desc, type, courseId);
