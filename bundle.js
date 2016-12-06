@@ -47488,6 +47488,8 @@
 	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: course.ID }));
 	            });
 
+	            console.log(learningPath);
+
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'filtered-courses' },
