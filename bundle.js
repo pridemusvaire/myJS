@@ -27527,6 +27527,7 @@
 
 	            var courses = this.props.courses;
 	            var updateViews = this.props.updateViews;
+	            var addToLearningPath = this.props.addToLearningPath;
 
 	            var type = this.props.params.type;
 
@@ -27540,7 +27541,7 @@
 	            var filterText = this.props.filterText;
 	            filteredCourses.forEach(function (course, index) {
 	                if (course.Keywords.toLowerCase().indexOf(filterText) !== -1) {
-	                    rows.push(_react2.default.createElement(CategoryItem, { course: course, key: course.ID, updateViews: updateViews }));
+	                    rows.push(_react2.default.createElement(CategoryItem, { course: course, key: course.ID, updateViews: updateViews, addToLearningPath: addToLearningPath }));
 	                }
 	            });
 
@@ -27705,6 +27706,7 @@
 
 	            var courses = this.props.courses;
 	            var updateViews = this.props.updateViews;
+	            var addToLearningPath = this.props.addToLearningPath;
 
 	            var briefing = this.props.params.briefing;
 
@@ -27716,7 +27718,7 @@
 	            var filterText = this.props.filterText;
 	            filteredCourses.forEach(function (course, index) {
 	                if (course.Keywords.toLowerCase().indexOf(filterText) !== -1) {
-	                    rows.push(_react2.default.createElement(CategoryItem, { course: course, key: course.ID, updateViews: updateViews }));
+	                    rows.push(_react2.default.createElement(CategoryItem, { course: course, key: course.ID, updateViews: updateViews, addToLearningPath: addToLearningPath }));
 	                }
 	            });
 
