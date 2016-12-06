@@ -47365,7 +47365,7 @@
 	    _createClass(CourseItem, [{
 	        key: 'gotoCourse',
 	        value: function gotoCourse(event) {
-	            this.context.router.push('/viewCourse/' + this.props.course.ID);
+	            this.context.router.push('/viewCourse/' + this.props.course.courseID);
 
 	            event.preventDefault();
 	        }
@@ -47452,8 +47452,31 @@
 	    }
 
 	    _createClass(MyLearning, [{
+	        key: 'loadData',
+	        value: function loadData() {
+	            var _this3 = this;
+
+	            var requestUri = "https://blacklightcoza.sharepoint.com/HR%20L%26D/_api/Web/Lists/GetByTitle('myLearningPath')/Items";
+	            var requestHeaders = {
+	                "accept": "application/json;odata=verbose"
+	            };
+	            $.ajax({
+	                url: requestUri,
+	                contentType: "application/json;odata=verbose",
+	                headers: requestHeaders,
+	                success: function success(data) {
+	                    _this3.setState({ courses: data.d.results });
+	                },
+	                error: function error(xhr, status, err) {
+	                    console.log(status, err.to);
+	                }
+	            });
+	        }
+	    }, {
 	        key: 'componentDidMount',
-	        value: function componentDidMount() {}
+	        value: function componentDidMount() {
+	            this.loadData();
+	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
