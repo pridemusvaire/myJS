@@ -47501,7 +47501,11 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'category-results' },
-	                    _react2.default.createElement('ul', { className: 'style-none' })
+	                    _react2.default.createElement(
+	                        'ul',
+	                        { className: 'style-none' },
+	                        learningPathItems
+	                    )
 	                )
 	            );
 	        }
