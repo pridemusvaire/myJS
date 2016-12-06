@@ -27412,6 +27412,7 @@
 	        var _this = _possibleConstructorReturn(this, (CategoryItem.__proto__ || Object.getPrototypeOf(CategoryItem)).call(this, props));
 
 	        _this.updateViews = _this.updateViews.bind(_this);
+	        _this.addToLearningPath = _this.addToLearningPath.bind(_this);
 
 	        return _this;
 	    }
@@ -27419,8 +27420,6 @@
 	    _createClass(CategoryItem, [{
 	        key: "updateViews",
 	        value: function updateViews(event) {
-	            event.preventDefault();
-
 	            var oldViews = this.props.course.Views;
 	            var updatedViews = Number(oldViews) + 1;
 	            var id = this.props.course.ID;
@@ -27428,6 +27427,20 @@
 	            this.props.updateViews(id, updatedViews);
 
 	            this.context.router.push('/viewCourse/' + this.props.course.ID);
+
+	            event.preventDefault();
+	        }
+	    }, {
+	        key: "addToLearningPath",
+	        value: function addToLearningPath(event) {
+	            var title = this.props.course.Title;
+	            var type = this.props.course.CourseType;
+	            var desc = this.course.props.Desc;
+	            var courseId = this.props.course.ID;
+
+	            this.props.addToLearningPath(title, desc, type, courseId);
+
+	            event.preventDefault();
 	        }
 	    }, {
 	        key: "render",
@@ -27477,7 +27490,7 @@
 	                                _react2.default.createElement(
 	                                    "li",
 	                                    null,
-	                                    _react2.default.createElement("a", { href: "#", className: "add" })
+	                                    _react2.default.createElement("a", { href: "#", className: "add", onClick: this.addToLearningPath })
 	                                ),
 	                                _react2.default.createElement(
 	                                    "li",
@@ -27577,6 +27590,7 @@
 	        var _this = _possibleConstructorReturn(this, (CategoryItem.__proto__ || Object.getPrototypeOf(CategoryItem)).call(this, props));
 
 	        _this.updateViews = _this.updateViews.bind(_this);
+	        _this.addToLearningPath = _this.addToLearningPath.bind(_this);
 
 	        return _this;
 	    }
@@ -27593,6 +27607,18 @@
 	            this.props.updateViews(id, updatedViews);
 
 	            this.context.router.push('/viewCourse/' + this.props.course.ID);
+	        }
+	    }, {
+	        key: "addToLearningPath",
+	        value: function addToLearningPath(event) {
+	            var title = this.props.course.Title;
+	            var type = this.props.course.CourseType;
+	            var desc = this.course.props.Desc;
+	            var courseId = this.props.course.ID;
+
+	            this.props.addToLearningPath(title, desc, type, courseId);
+
+	            event.preventDefault();
 	        }
 	    }, {
 	        key: "render",
@@ -27642,7 +27668,7 @@
 	                                _react2.default.createElement(
 	                                    "li",
 	                                    null,
-	                                    _react2.default.createElement("a", { href: "#", className: "add" })
+	                                    _react2.default.createElement("a", { href: "#", className: "add", onClick: this.addToLearningPath })
 	                                ),
 	                                _react2.default.createElement(
 	                                    "li",
