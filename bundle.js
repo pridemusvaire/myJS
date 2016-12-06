@@ -47446,7 +47446,7 @@
 	        var _this2 = _possibleConstructorReturn(this, (MyLearning.__proto__ || Object.getPrototypeOf(MyLearning)).call(this, props));
 
 	        _this2.state = {
-	            learningPath: _myLearningPath2.default
+	            learningPath: []
 	        };
 	        return _this2;
 	    }
@@ -47465,7 +47465,7 @@
 	                contentType: "application/json;odata=verbose",
 	                headers: requestHeaders,
 	                success: function success(data) {
-	                    _this3.setState({ courses: data.d.results });
+	                    _this3.setState({ learningPath: data.d.results });
 	                },
 	                error: function error(xhr, status, err) {
 	                    console.log(status, err.to);
