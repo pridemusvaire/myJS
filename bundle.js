@@ -47504,7 +47504,8 @@
 	                    _react2.default.createElement(
 	                        'ul',
 	                        { className: 'style-none' },
-	                        learningPathItems
+	                        learningPathItems,
+	                        'lil'
 	                    )
 	                )
 	            );
