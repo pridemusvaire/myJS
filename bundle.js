@@ -663,7 +663,7 @@
 	                async: false,
 	                batchCmd: "New",
 	                listName: "myLearningPath",
-	                valuepairs: [["Title", title], ["Title", title], ["CourseType", type], ["CourseID", courseId]],
+	                valuepairs: [["Title", title], ["Desc", desc], ["CourseType", type], ["CourseID", courseId]],
 	                completefunc: function completefunc(xData, Status) {
 	                    console.log('updated');
 	                }
@@ -47504,8 +47504,7 @@
 	                    _react2.default.createElement(
 	                        'ul',
 	                        { className: 'style-none' },
-	                        learningPathItems,
-	                        'li'
+	                        learningPathItems
 	                    )
 	                )
 	            );
