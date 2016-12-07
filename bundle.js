@@ -45431,7 +45431,7 @@
 	                    this.props.course.Video && _react2.default.createElement(
 	                        'div',
 	                        { className: 'image' },
-	                        _react2.default.createElement(_reactPlayer2.default, { url: this.props.course.Video, controls: true, width: '100%', height: 'auto' })
+	                        _react2.default.createElement(_reactPlayer2.default, { url: this.props.course.Video.Url, controls: true, width: '100%', height: 'auto' })
 	                    )
 	                ),
 	                _react2.default.createElement(
