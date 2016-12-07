@@ -47317,7 +47317,7 @@
 /* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -47333,10 +47333,6 @@
 
 	var _myLearningPath2 = _interopRequireDefault(_myLearningPath);
 
-	var _izitoast = __webpack_require__(266);
-
-	var _izitoast2 = _interopRequireDefault(_izitoast);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47344,6 +47340,8 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var iziToast = __webpack_require__(265);
 
 	var CourseItem = function (_React$Component) {
 	    _inherits(CourseItem, _React$Component);
@@ -47360,14 +47358,14 @@
 	    }
 
 	    _createClass(CourseItem, [{
-	        key: "gotoCourse",
+	        key: 'gotoCourse',
 	        value: function gotoCourse(event) {
 	            this.context.router.push('/viewCourse/' + this.props.course.CourseID);
 
 	            event.preventDefault();
 	        }
 	    }, {
-	        key: "deleteCourse",
+	        key: 'deleteCourse',
 	        value: function deleteCourse(event) {
 	            var id = Number(this.props.course.ID);
 	            var index = this.props.index;
@@ -47379,64 +47377,64 @@
 	            event.preventDefault();
 	        }
 	    }, {
-	        key: "showNotification",
+	        key: 'showNotification',
 	        value: function showNotification() {
-	            _izitoast2.default.success({ title: 'OK', message: 'Course removed successfully', position: 'topCenter' });
+	            iziToast.success({ title: 'OK', message: 'Course removed successfully', position: 'topCenter' });
 	        }
 	    }, {
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
-	                "li",
-	                { className: "item" },
+	                'li',
+	                { className: 'item' },
 	                _react2.default.createElement(
-	                    "div",
-	                    { className: "icon" },
+	                    'div',
+	                    { className: 'icon' },
 	                    _react2.default.createElement(
-	                        "span",
+	                        'span',
 	                        {
 	                            className: this.props.course.CourseType.toLowerCase().replace(/ /g, "-") },
 	                        _react2.default.createElement(
-	                            "span",
-	                            { className: "toolTip" },
+	                            'span',
+	                            { className: 'toolTip' },
 	                            this.props.course.CourseType
 	                        )
 	                    )
 	                ),
 	                _react2.default.createElement(
-	                    "div",
-	                    { className: "desc" },
+	                    'div',
+	                    { className: 'desc' },
 	                    _react2.default.createElement(
-	                        "a",
-	                        { href: "#", className: "heading", onClick: this.gotoCourse },
+	                        'a',
+	                        { href: '#', className: 'heading', onClick: this.gotoCourse },
 	                        this.props.course.Title
 	                    ),
 	                    _react2.default.createElement(
-	                        "p",
-	                        { className: "desc-text" },
+	                        'p',
+	                        { className: 'desc-text' },
 	                        this.props.course.Desc.substr(0, 397) + '....'
 	                    )
 	                ),
 	                _react2.default.createElement(
-	                    "div",
-	                    { className: "shares my-learning" },
+	                    'div',
+	                    { className: 'shares my-learning' },
 	                    _react2.default.createElement(
-	                        "ul",
-	                        { className: "style-none" },
+	                        'ul',
+	                        { className: 'style-none' },
 	                        _react2.default.createElement(
-	                            "li",
+	                            'li',
 	                            null,
-	                            _react2.default.createElement("a", { href: "#", className: "shop" })
+	                            _react2.default.createElement('a', { href: '#', className: 'shop' })
 	                        ),
 	                        _react2.default.createElement(
-	                            "li",
+	                            'li',
 	                            null,
-	                            _react2.default.createElement("a", { href: "#", className: "remove", onClick: this.deleteCourse })
+	                            _react2.default.createElement('a', { href: '#', className: 'remove', onClick: this.deleteCourse })
 	                        ),
 	                        _react2.default.createElement(
-	                            "li",
+	                            'li',
 	                            null,
-	                            _react2.default.createElement("a", { href: "mailto:", className: "share" })
+	                            _react2.default.createElement('a', { href: 'mailto:', className: 'share' })
 	                        )
 	                    )
 	                )
@@ -47469,7 +47467,7 @@
 	    }
 
 	    _createClass(MyLearning, [{
-	        key: "loadData",
+	        key: 'loadData',
 	        value: function loadData() {
 	            var _this3 = this;
 
@@ -47490,12 +47488,12 @@
 	            });
 	        }
 	    }, {
-	        key: "componentDidMount",
+	        key: 'componentDidMount',
 	        value: function componentDidMount() {
 	            this.loadData();
 	        }
 	    }, {
-	        key: "deleteCourse",
+	        key: 'deleteCourse',
 	        value: function deleteCourse(id, index) {
 	            var items = this.state.learningPath;
 	            $().SPServices({
@@ -47512,7 +47510,7 @@
 	            this.setState({ learningPath: items });
 	        }
 	    }, {
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
 
 	            var learningPathItems = [];
@@ -47528,24 +47526,24 @@
 	            });
 
 	            return _react2.default.createElement(
-	                "div",
-	                { className: "filtered-courses" },
+	                'div',
+	                { className: 'filtered-courses' },
 	                _react2.default.createElement(
-	                    "h1",
-	                    { className: "heading-main" },
-	                    "My Learning Path"
+	                    'h1',
+	                    { className: 'heading-main' },
+	                    'My Learning Path'
 	                ),
 	                _react2.default.createElement(
-	                    "div",
-	                    { className: "category-results" },
+	                    'div',
+	                    { className: 'category-results' },
 	                    learningPathItems.length == 0 && _react2.default.createElement(
-	                        "h1",
-	                        { className: "nothing-found" },
-	                        "You have no items in your learning path, you can add items by clicking the add icon on search course page."
+	                        'h1',
+	                        { className: 'nothing-found' },
+	                        'You have no items in your learning path, you can add items by clicking the add icon on search course page.'
 	                    ),
 	                    _react2.default.createElement(
-	                        "ul",
-	                        { className: "style-none" },
+	                        'ul',
+	                        { className: 'style-none' },
 	                        learningPathItems
 	                    )
 	                )
@@ -47622,8 +47620,7 @@
 
 /***/ },
 /* 264 */,
-/* 265 */,
-/* 266 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*
