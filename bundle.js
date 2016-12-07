@@ -47498,12 +47498,11 @@
 	                listName: "myLearningPath",
 	                batchCmd: "Delete",
 	                ID: id,
-	                completefunc: function completefunc(xData, Status) {
-	                    // remove item from dom
-	                    items = items.splice(id, 1);
-	                }
+	                completefunc: function completefunc(xData, Status) {}
 	            });
 
+	            items.splice(id, 1);
+	            console.log(items.length);
 	            this.getNewState(items);
 	        }
 	    }, {
