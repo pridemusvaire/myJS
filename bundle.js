@@ -47371,7 +47371,7 @@
 	                batchCmd: "Delete",
 	                ID: id,
 	                completefunc: function completefunc(xData, Status) {
-	                    console.log(Status + 'Updated');
+	                    console.log(id + 'Updated');
 	                }
 	            });
 
