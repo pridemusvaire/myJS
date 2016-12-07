@@ -27822,7 +27822,7 @@
 	                        _react2.default.createElement(
 	                            "p",
 	                            { className: "icons" },
-	                            _react2.default.createElement("a", { href: "#", className: "insights" })
+	                            _react2.default.createElement("a", { href: "#", className: this.props.course.CourseType })
 	                        )
 	                    )
 	                )
