@@ -45469,7 +45469,6 @@
 	            });
 
 	            filteredCourses.forEach(function (item, index) {
-	                console.log(item.ID);
 	                rows.push(_react2.default.createElement(CourseItem, { course: item, key: item.ID }));
 	            });
 
@@ -47351,6 +47350,7 @@
 	        var _this = _possibleConstructorReturn(this, (CourseItem.__proto__ || Object.getPrototypeOf(CourseItem)).call(this, props));
 
 	        _this.gotoCourse = _this.gotoCourse.bind(_this);
+	        _this.deleteCourse = _this.deleteCourse.bind(_this);
 	        return _this;
 	    }
 
@@ -47358,6 +47358,20 @@
 	        key: 'gotoCourse',
 	        value: function gotoCourse(event) {
 	            this.context.router.push('/viewCourse/' + this.props.course.CourseID);
+
+	            event.preventDefault();
+	        }
+	    }, {
+	        key: 'deleteCourse',
+	        value: function deleteCourse(event) {
+	            var id = this.props.course.ID;
+	            $().SPServices.SPUpdateMultipleListItems({
+	                async: true,
+	                listName: "myLearningPath",
+	                batchCmd: "Delete",
+	                ID: id,
+	                completefunc: function completefunc(xData, Status) {}
+	            });
 
 	            event.preventDefault();
 	        }
@@ -47409,7 +47423,7 @@
 	                        _react2.default.createElement(
 	                            'li',
 	                            null,
-	                            _react2.default.createElement('a', { href: '#', className: 'remove' })
+	                            _react2.default.createElement('a', { href: '#', className: 'remove', onClick: this.deleteCourse })
 	                        ),
 	                        _react2.default.createElement(
 	                            'li',
@@ -47448,7 +47462,7 @@
 	        value: function loadData() {
 	            var _this3 = this;
 
-	            var requestUri = "https://blacklightcoza.sharepoint.com/HR%20L%26D/_api/Web/Lists/GetByTitle('myLearningPath')/Items";
+	            var requestUri = "https://blacklightcoza.sharepoint.com/HR%20L%26D/_api/Web/Lists/GetByTitle('myLe" + "arningPath')/Items";
 	            var requestHeaders = {
 	                "accept": "application/json;odata=verbose"
 	            };
@@ -47479,8 +47493,6 @@
 	            learningPath.forEach(function (course, index) {
 	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: course.ID }));
 	            });
-
-	            console.log(learningPath);
 
 	            return _react2.default.createElement(
 	                'div',
