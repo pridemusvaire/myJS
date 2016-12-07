@@ -45421,7 +45421,10 @@
 	    _createClass(CourseItem, [{
 	        key: 'render',
 	        value: function render() {
-
+	            var link = '';
+	            if (this.props.course.Link != null) {
+	                var _link = this.props.course.Link != null;
+	            }
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'view-course' },
@@ -45462,7 +45465,7 @@
 	                    ),
 	                    this.props.course.Link != null && _react2.default.createElement(
 	                        'a',
-	                        { href: this.props.Link.Url, className: 'view-e-book' },
+	                        { href: link, className: 'view-e-book' },
 	                        'Click to View E-Book'
 	                    )
 	                ),
