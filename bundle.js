@@ -45465,6 +45465,18 @@
 	    _createClass(ViewCourse, [{
 	        key: 'usefulCourse',
 	        value: function usefulCourse(answer, course) {
+
+	            $().SPServices({
+	                operation: "UpdateListItems",
+	                async: false,
+	                batchCmd: "New",
+	                listName: "usefull",
+	                valuepairs: [["Course", course], ["Usefull", answer]],
+	                completefunc: function completefunc(xData, Status) {
+	                    console.log('updated');
+	                }
+	            });
+
 	            console.log(answer, course);
 	        }
 	    }, {
