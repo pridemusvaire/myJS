@@ -45431,6 +45431,7 @@
 	            if (this.props.course.Link != null) {
 	                link = this.props.course.Link.Url;
 	            }
+
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'view-course' },
@@ -47446,6 +47447,9 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+
+	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/") + this.props.course.ID + ".";
+
 	            return _react2.default.createElement(
 	                'li',
 	                { className: 'item' },
@@ -47491,7 +47495,7 @@
 	                        _react2.default.createElement(
 	                            'li',
 	                            null,
-	                            _react2.default.createElement('a', { href: 'mailto:', className: 'share' })
+	                            _react2.default.createElement('a', { href: shareLink, className: 'share' })
 	                        )
 	                    )
 	                )
