@@ -45354,7 +45354,7 @@
 	    _createClass(Useful, [{
 	        key: 'yes',
 	        value: function yes(event) {
-	            var course = this.props.course;
+	            var course = this.props.course.Title;
 	            var answer = 'Yes';
 
 	            this.props.usefulCourse(answer, course);
@@ -45364,7 +45364,7 @@
 	    }, {
 	        key: 'no',
 	        value: function no(event) {
-	            var course = this.props.course;
+	            var course = this.props.course.Title;
 	            var answer = 'No';
 
 	            this.props.usefulCourse(answer, course);
