@@ -45394,13 +45394,13 @@
 	                    'span',
 	                    { className: this.state.answered },
 	                    _react2.default.createElement(
-	                        'a',
-	                        _defineProperty({ href: '#', className: 'yes', onClick: this.no }, 'onClick', this.yes),
+	                        'button',
+	                        _defineProperty({ className: 'yes', onClick: this.no }, 'onClick', this.yes),
 	                        'Yes'
 	                    ),
 	                    _react2.default.createElement(
-	                        'a',
-	                        _defineProperty({ href: '#', className: 'no', onClick: this.no }, 'onClick', this.no),
+	                        'button',
+	                        _defineProperty({ className: 'no', onClick: this.no }, 'onClick', this.no),
 	                        'No'
 	                    )
 	                )
