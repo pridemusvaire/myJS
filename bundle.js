@@ -45374,12 +45374,12 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        _defineProperty({ href: '#', className: 'yes', onClick: this.no }, 'onClick', usefulCourse('yes')),
+	                        _defineProperty({ href: '#', className: 'yes', onClick: this.no }, 'onClick', this.usefulCourse('yes')),
 	                        'Yes'
 	                    ),
 	                    _react2.default.createElement(
 	                        'a',
-	                        _defineProperty({ href: '#', className: 'no', onClick: this.no }, 'onClick', usefulCourse('no')),
+	                        _defineProperty({ href: '#', className: 'no', onClick: this.no }, 'onClick', this.usefulCourse('no')),
 	                        'No'
 	                    )
 	                )
