@@ -27445,6 +27445,9 @@
 	    }, {
 	        key: "render",
 	        value: function render() {
+
+	            var shareLink = "mailto:?subject=I wanted you to view this course&amp;body=Check out this link https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/" + this.props.course.ID + ".";
+
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "category-results" },
@@ -27495,7 +27498,7 @@
 	                                _react2.default.createElement(
 	                                    "li",
 	                                    null,
-	                                    _react2.default.createElement("a", { href: "#", className: "share" })
+	                                    _react2.default.createElement("a", { href: shareLink, className: "share" })
 	                                )
 	                            )
 	                        )
@@ -27624,6 +27627,8 @@
 	    }, {
 	        key: "render",
 	        value: function render() {
+
+	            var shareLink = "mailto:?subject=I wanted you to view this course&amp;body=Check out this link https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/" + this.props.course.ID + ".";
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "category-results" },
@@ -27674,7 +27679,7 @@
 	                                _react2.default.createElement(
 	                                    "li",
 	                                    null,
-	                                    _react2.default.createElement("a", { href: "#", className: "share" })
+	                                    _react2.default.createElement("a", { href: shareLink, className: "share" })
 	                                )
 	                            )
 	                        )
