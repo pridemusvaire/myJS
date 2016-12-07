@@ -47501,9 +47501,10 @@
 	                completefunc: function completefunc(xData, Status) {
 	                    // remove item from dom
 	                    items = items.splice(id, 1);
-	                    this.getNewState(items);
 	                }
 	            });
+
+	            this.getNewState(items);
 	        }
 	    }, {
 	        key: 'render',
