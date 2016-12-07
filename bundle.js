@@ -45354,14 +45354,14 @@
 	        key: 'yes',
 	        value: function yes(event) {
 	            var answer = 'Yes';
-	            usefulCourse(answer);
+	            this.usefulCourse(answer);
 	            event.preventDefault();
 	        }
 	    }, {
 	        key: 'no',
 	        value: function no(event) {
 	            var answer = 'No';
-	            usefulCourse(answer);
+	            this.usefulCourse(answer);
 	            event.preventDefault();
 	        }
 	    }, {
