@@ -47370,7 +47370,9 @@
 	                listName: "myLearningPath",
 	                batchCmd: "Delete",
 	                ID: id,
-	                completefunc: function completefunc(xData, Status) {}
+	                completefunc: function completefunc(xData, Status) {
+	                    console.log(Status + 'Updated');
+	                }
 	            });
 
 	            event.preventDefault();
