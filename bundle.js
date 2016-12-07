@@ -47365,9 +47365,10 @@
 	        key: 'deleteCourse',
 	        value: function deleteCourse(event) {
 	            var id = Number(this.props.course.ID);
+	            var index = this.props.index;
 
 	            // delete course
-	            this.props.deleteCourse(id);
+	            this.props.deleteCourse(id, index);
 
 	            event.preventDefault();
 	        }
@@ -47484,13 +47485,8 @@
 	            this.loadData();
 	        }
 	    }, {
-	        key: 'getNewState',
-	        value: function getNewState(items) {
-	            this.setState({ learningPath: items });
-	        }
-	    }, {
 	        key: 'deleteCourse',
-	        value: function deleteCourse(id) {
+	        value: function deleteCourse(id, index) {
 	            var items = this.state.learningPath;
 	            $().SPServices({
 	                operation: "UpdateListItems",
@@ -47501,9 +47497,9 @@
 	                completefunc: function completefunc(xData, Status) {}
 	            });
 
-	            items.splice(id, 1);
+	            items.splice(index, 1);
 	            console.log(items.length);
-	            this.getNewState(items);
+	            this.setState({ learningPath: items });
 	        }
 	    }, {
 	        key: 'render',
@@ -47514,7 +47510,7 @@
 	            var deleteCourse = this.deleteCourse;
 
 	            learningPath.forEach(function (course, index) {
-	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: index, deleteCourse: deleteCourse }));
+	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: course.ID, index: index, deleteCourse: deleteCourse }));
 	            });
 
 	            return _react2.default.createElement(
