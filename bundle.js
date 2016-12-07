@@ -45463,7 +45463,7 @@
 	                    this.props.course.Link != null && _react2.default.createElement(
 	                        'a',
 	                        { href: this.props.Link.Url, className: 'view-e-book' },
-	                        'View E-Book'
+	                        'Click to View E-Book'
 	                    )
 	                ),
 	                _react2.default.createElement(
