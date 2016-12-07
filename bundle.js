@@ -47496,6 +47496,7 @@
 	        key: 'deleteCourse',
 	        value: function deleteCourse(id, index) {
 	            var items = this.state.learningPath;
+	            items = _.orderBy(items, ['Modified'], ['desc']);
 	            $().SPServices({
 	                operation: "UpdateListItems",
 	                async: true,
@@ -47506,7 +47507,6 @@
 	            });
 
 	            items.splice(index, 1);
-	            console.log(items.length);
 	            this.setState({ learningPath: items });
 	        }
 	    }, {
