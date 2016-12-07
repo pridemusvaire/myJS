@@ -47355,6 +47355,7 @@
 
 	        _this.gotoCourse = _this.gotoCourse.bind(_this);
 	        _this.deleteCourse = _this.deleteCourse.bind(_this);
+	        _this.showNotification = _this.showNotification.bind(_this);
 	        return _this;
 	    }
 
@@ -47374,7 +47375,13 @@
 	            // delete course
 	            this.props.deleteCourse(id, index);
 
+	            this.showNotification();
 	            event.preventDefault();
+	        }
+	    }, {
+	        key: "showNotification",
+	        value: function showNotification() {
+	            _izitoast2.default.success({ title: 'OK', message: 'Course removed successfully', position: 'topCenter' });
 	        }
 	    }, {
 	        key: "render",
@@ -47503,12 +47510,6 @@
 	            items.splice(index, 1);
 	            console.log(items.length);
 	            this.setState({ learningPath: items });
-
-	            _izitoast2.default.success({
-	                title: 'OK',
-	                message: 'Course removed successfully',
-	                position: 'topCenter'
-	            });
 	        }
 	    }, {
 	        key: "render",
