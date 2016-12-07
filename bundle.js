@@ -47516,6 +47516,7 @@
 	            var learningPathItems = [];
 	            var learningPath = this.state.learningPath;
 	            var deleteCourse = this.deleteCourse;
+	            learningPath = _.orderBy(learningPath, ['Modified'], ['desc']);
 
 	            learningPath.forEach(function (course, index) {
 	                learningPathItems.push(_react2.default.createElement(CourseItem, {
