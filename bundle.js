@@ -47365,6 +47365,7 @@
 	        key: 'deleteCourse',
 	        value: function deleteCourse(event) {
 	            var id = Number(this.props.course.ID);
+	            console.log(id);
 	            $().SPServices.SPUpdateMultipleListItems({
 	                async: true,
 	                listName: "myLearningPath",
