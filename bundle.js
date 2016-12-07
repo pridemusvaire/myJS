@@ -27801,15 +27801,7 @@
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "featured" },
-	                    _react2.default.createElement(
-	                        "div",
-	                        { className: "image", style: courseImage, onClick: this.gotoCourse },
-	                        _react2.default.createElement(
-	                            "h1",
-	                            { className: "sub-heading" },
-	                            this.props.course.Views
-	                        )
-	                    ),
+	                    _react2.default.createElement("div", { className: "image", style: courseImage, onClick: this.gotoCourse }),
 	                    _react2.default.createElement(
 	                        "div",
 	                        { className: "desc" },
@@ -47365,7 +47357,7 @@
 	    _createClass(CourseItem, [{
 	        key: 'gotoCourse',
 	        value: function gotoCourse(event) {
-	            this.context.router.push('/viewCourse/' + this.props.course.courseID);
+	            this.context.router.push('/viewCourse/' + this.props.course.CourseID);
 
 	            event.preventDefault();
 	        }
