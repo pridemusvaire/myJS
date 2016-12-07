@@ -45346,6 +45346,10 @@
 
 	        var _this = _possibleConstructorReturn(this, (Useful.__proto__ || Object.getPrototypeOf(Useful)).call(this, props));
 
+	        _this.state = {
+	            answered: ''
+	        };
+
 	        _this.yes = _this.yes.bind(_this);
 	        _this.no = _this.no.bind(_this);
 	        return _this;
@@ -45359,6 +45363,8 @@
 
 	            this.props.usefulCourse(answer, course);
 
+	            this.setState({ answered: 'answered' });
+
 	            event.preventDefault();
 	        }
 	    }, {
@@ -45368,6 +45374,8 @@
 	            var answer = 'No';
 
 	            this.props.usefulCourse(answer, course);
+
+	            this.setState({ answered: 'answered' });
 
 	            event.preventDefault();
 	        }
@@ -45384,7 +45392,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    'span',
-	                    null,
+	                    { className: this.state.answered },
 	                    _react2.default.createElement(
 	                        'a',
 	                        _defineProperty({ href: '#', className: 'yes', onClick: this.no }, 'onClick', this.yes),
