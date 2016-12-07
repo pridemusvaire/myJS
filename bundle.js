@@ -45427,6 +45427,9 @@
 	    _createClass(CourseItem, [{
 	        key: 'render',
 	        value: function render() {
+
+	            console.log(this.props.course.Link.Url);
+
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'view-course' },
@@ -45464,11 +45467,6 @@
 	                            controls: true,
 	                            width: '100%',
 	                            height: '538px' })
-	                    ),
-	                    this.props.course.Link != 'null' && _react2.default.createElement(
-	                        'a',
-	                        { href: this.props.Link.Url, className: 'view-e-book' },
-	                        'View E-Book'
 	                    )
 	                ),
 	                _react2.default.createElement(
