@@ -47466,7 +47466,12 @@
 	                batchCmd: "Delete",
 	                ID: id,
 	                completefunc: function completefunc(xData, Status) {
-	                    console.log(id + 'Updated');
+	                    // remove item from dom
+	                    var items = this.state.learningPath;
+	                    items.splice(id, 1);
+	                    this.setState({
+	                        learningPath: items
+	                    });
 	                }
 	            });
 	        }
@@ -47505,7 +47510,7 @@
 	            var deleteCourse = this.deleteCourse;
 
 	            learningPath.forEach(function (course, index) {
-	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: course.ID, deleteCourse: deleteCourse }));
+	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: index, deleteCourse: deleteCourse }));
 	            });
 
 	            return _react2.default.createElement(
