@@ -47494,11 +47494,10 @@
 	                completefunc: function completefunc(xData, Status) {
 	                    // remove item from dom
 	                    items.splice(id, 1);
-	                    this.setState({
-	                        learningPath: items
-	                    });
 	                }
 	            });
+
+	            this.setState({ learningPath: items });
 	        }
 	    }, {
 	        key: 'render',
