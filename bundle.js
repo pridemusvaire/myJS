@@ -45346,31 +45346,30 @@
 
 	        var _this = _possibleConstructorReturn(this, (Useful.__proto__ || Object.getPrototypeOf(Useful)).call(this, props));
 
-	        _this.usefulCourse = _this.usefulCourse.bind(_this);
+	        _this.yes = _this.yes.bind(_this);
+	        _this.no = _this.no.bind(_this);
 	        return _this;
 	    }
 
 	    _createClass(Useful, [{
 	        key: 'yes',
 	        value: function yes(event) {
+	            var course = this.props.course;
 	            var answer = 'Yes';
-	            this.usefulCourse(answer);
+
+	            this.props.usefulCourse(answer, course);
+
 	            event.preventDefault();
 	        }
 	    }, {
 	        key: 'no',
 	        value: function no(event) {
-	            var answer = 'No';
-	            this.usefulCourse(answer);
-	            event.preventDefault();
-	        }
-	    }, {
-	        key: 'usefulCourse',
-	        value: function usefulCourse(answer) {
 	            var course = this.props.course;
+	            var answer = 'No';
 
 	            this.props.usefulCourse(answer, course);
-	            answer.preventDefault();
+
+	            event.preventDefault();
 	        }
 	    }, {
 	        key: 'render',
