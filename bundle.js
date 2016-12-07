@@ -45423,7 +45423,7 @@
 	        value: function render() {
 	            var link = '';
 	            if (this.props.course.Link != null) {
-	                var _link = this.props.course.Link != null;
+	                link = this.props.course.Link.Url;
 	            }
 	            return _react2.default.createElement(
 	                'div',
