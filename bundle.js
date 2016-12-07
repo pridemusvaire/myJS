@@ -47509,7 +47509,11 @@
 	            var deleteCourse = this.deleteCourse;
 
 	            learningPath.forEach(function (course, index) {
-	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: index, index: index, deleteCourse: deleteCourse }));
+	                learningPathItems.push(_react2.default.createElement(CourseItem, {
+	                    course: course,
+	                    key: index,
+	                    index: index,
+	                    deleteCourse: deleteCourse }));
 	            });
 
 	            return _react2.default.createElement(
@@ -47523,6 +47527,11 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'category-results' },
+	                    learningPathItems.length == 0 && _react2.default.createElement(
+	                        'h1',
+	                        { className: 'nothing-found' },
+	                        'You have no items in your learning path, you can add items by clicking the add icon on search course page.'
+	                    ),
 	                    _react2.default.createElement(
 	                        'ul',
 	                        { className: 'style-none' },
