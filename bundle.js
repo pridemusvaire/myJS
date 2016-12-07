@@ -45462,17 +45462,17 @@
 	                            controls: true,
 	                            width: '100%',
 	                            height: '538px' })
-	                    ),
-	                    this.props.course.Link != null && _react2.default.createElement(
-	                        'a',
-	                        { href: link, className: 'view-e-book' },
-	                        'Click to View E-Book'
 	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'course-body' },
 	                    this.props.course.Desc
+	                ),
+	                this.props.course.Link != null && _react2.default.createElement(
+	                    'a',
+	                    { href: link, className: 'view-e-book', target: '_blank' },
+	                    'Click to View E-Book'
 	                ),
 	                _react2.default.createElement(Useful, { course: this.props.course, usefulCourse: this.props.usefulCourse })
 	            );
