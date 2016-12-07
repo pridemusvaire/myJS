@@ -45351,6 +45351,20 @@
 	    }
 
 	    _createClass(Useful, [{
+	        key: 'yes',
+	        value: function yes(event) {
+	            var answer = 'Yes';
+	            usefulCourse(answer);
+	            event.preventDefault();
+	        }
+	    }, {
+	        key: 'no',
+	        value: function no(event) {
+	            var answer = 'No';
+	            usefulCourse(answer);
+	            event.preventDefault();
+	        }
+	    }, {
 	        key: 'usefulCourse',
 	        value: function usefulCourse(answer) {
 	            var course = this.props.course;
@@ -45374,12 +45388,12 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        _defineProperty({ href: '#', className: 'yes', onClick: this.no }, 'onClick', this.usefulCourse('yes')),
+	                        _defineProperty({ href: '#', className: 'yes', onClick: this.no }, 'onClick', this.yes),
 	                        'Yes'
 	                    ),
 	                    _react2.default.createElement(
 	                        'a',
-	                        _defineProperty({ href: '#', className: 'no', onClick: this.no }, 'onClick', this.usefulCourse('no')),
+	                        _defineProperty({ href: '#', className: 'no', onClick: this.no }, 'onClick', this.no),
 	                        'No'
 	                    )
 	                )
@@ -45413,7 +45427,8 @@
 	                        { className: 'icon' },
 	                        _react2.default.createElement(
 	                            'span',
-	                            { className: this.props.course.CourseType.toLowerCase().replace(/ /g, "-") },
+	                            {
+	                                className: this.props.course.CourseType.toLowerCase().replace(/ /g, "-") },
 	                            _react2.default.createElement(
 	                                'span',
 	                                { className: 'toolTip' },
@@ -45424,7 +45439,6 @@
 	                    _react2.default.createElement(
 	                        'h1',
 	                        { className: 'heading-main' },
-	                        ' ',
 	                        this.props.course.Title
 	                    )
 	                ),
@@ -45434,7 +45448,11 @@
 	                    this.props.course.Video && _react2.default.createElement(
 	                        'div',
 	                        { className: 'image' },
-	                        _react2.default.createElement(_reactPlayer2.default, { url: this.props.course.Video.Url, controls: true, width: '100%', height: '538px' })
+	                        _react2.default.createElement(_reactPlayer2.default, {
+	                            url: this.props.course.Video.Url,
+	                            controls: true,
+	                            width: '100%',
+	                            height: '538px' })
 	                    )
 	                ),
 	                _react2.default.createElement(
