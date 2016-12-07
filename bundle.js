@@ -45328,6 +45328,8 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -45339,20 +45341,21 @@
 	var Useful = function (_React$Component) {
 	    _inherits(Useful, _React$Component);
 
-	    function Useful() {
+	    function Useful(props) {
 	        _classCallCheck(this, Useful);
 
-	        return _possibleConstructorReturn(this, (Useful.__proto__ || Object.getPrototypeOf(Useful)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (Useful.__proto__ || Object.getPrototypeOf(Useful)).call(this, props));
+
+	        _this.usefulCourse = _this.usefulCourse.bind(_this);
+	        return _this;
 	    }
 
 	    _createClass(Useful, [{
-	        key: 'yes',
-	        value: function yes(event) {
-	            event.preventDefault();
-	        }
-	    }, {
-	        key: 'no',
-	        value: function no(event) {
+	        key: 'usefulCourse',
+	        value: function usefulCourse(event, answer) {
+	            var course = this.props.course;
+
+	            this.props.usefulCourse(answer, course);
 	            event.preventDefault();
 	        }
 	    }, {
@@ -45371,12 +45374,12 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: '#', className: 'yes', onClick: this.no },
+	                        _defineProperty({ href: '#', className: 'yes', onClick: this.no }, 'onClick', usefulCourse('yes')),
 	                        'Yes'
 	                    ),
 	                    _react2.default.createElement(
 	                        'a',
-	                        { href: '#', className: 'no', onClick: this.no },
+	                        _defineProperty({ href: '#', className: 'no', onClick: this.no }, 'onClick', usefulCourse('no')),
 	                        'No'
 	                    )
 	                )
@@ -45431,7 +45434,7 @@
 	                    this.props.course.Video && _react2.default.createElement(
 	                        'div',
 	                        { className: 'image' },
-	                        _react2.default.createElement(_reactPlayer2.default, { url: this.props.course.Video.Url, controls: true, width: '100%', height: '400px' })
+	                        _react2.default.createElement(_reactPlayer2.default, { url: this.props.course.Video.Url, controls: true, width: '100%', height: '538px' })
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -45439,7 +45442,7 @@
 	                    { className: 'course-body' },
 	                    this.props.course.Desc
 	                ),
-	                _react2.default.createElement(Useful, null)
+	                _react2.default.createElement(Useful, { course: this.props.course, usefulCourse: this.props.usefulCourse })
 	            );
 	        }
 	    }]);
@@ -45450,13 +45453,21 @@
 	var ViewCourse = function (_React$Component3) {
 	    _inherits(ViewCourse, _React$Component3);
 
-	    function ViewCourse() {
+	    function ViewCourse(props) {
 	        _classCallCheck(this, ViewCourse);
 
-	        return _possibleConstructorReturn(this, (ViewCourse.__proto__ || Object.getPrototypeOf(ViewCourse)).apply(this, arguments));
+	        var _this3 = _possibleConstructorReturn(this, (ViewCourse.__proto__ || Object.getPrototypeOf(ViewCourse)).call(this, props));
+
+	        _this3.usefulCourse = _this3.usefulCourse.bind(_this3);
+	        return _this3;
 	    }
 
 	    _createClass(ViewCourse, [{
+	        key: 'usefulCourse',
+	        value: function usefulCourse(answer, course) {
+	            console.log(answer, course);
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 
@@ -45469,7 +45480,7 @@
 	            });
 
 	            filteredCourses.forEach(function (item, index) {
-	                rows.push(_react2.default.createElement(CourseItem, { course: item, key: item.ID }));
+	                rows.push(_react2.default.createElement(CourseItem, { course: item, key: item.ID, usefulCourse: this.usefulCourse }));
 	            });
 
 	            return _react2.default.createElement(
