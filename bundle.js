@@ -47456,26 +47456,6 @@
 	    }
 
 	    _createClass(MyLearning, [{
-	        key: 'deleteCourse',
-	        value: function deleteCourse(id) {
-	            console.log(id);
-	            $().SPServices({
-	                operation: "UpdateListItems",
-	                async: true,
-	                listName: "myLearningPath",
-	                batchCmd: "Delete",
-	                ID: id,
-	                completefunc: function completefunc(xData, Status) {
-	                    // remove item from dom
-	                    var items = this.state.learningPath;
-	                    items.splice(id, 1);
-	                    this.setState({
-	                        learningPath: items
-	                    });
-	                }
-	            });
-	        }
-	    }, {
 	        key: 'loadData',
 	        value: function loadData() {
 	            var _this3 = this;
@@ -47500,6 +47480,25 @@
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
 	            this.loadData();
+	        }
+	    }, {
+	        key: 'deleteCourse',
+	        value: function deleteCourse(id) {
+	            var items = this.state.learningPath;
+	            $().SPServices({
+	                operation: "UpdateListItems",
+	                async: true,
+	                listName: "myLearningPath",
+	                batchCmd: "Delete",
+	                ID: id,
+	                completefunc: function completefunc(xData, Status) {
+	                    // remove item from dom
+	                    items.splice(id, 1);
+	                    this.setState({
+	                        learningPath: items
+	                    });
+	                }
+	            });
 	        }
 	    }, {
 	        key: 'render',
