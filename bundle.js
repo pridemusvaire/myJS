@@ -27446,7 +27446,7 @@
 	        key: "render",
 	        value: function render() {
 
-	            var shareLink = "mailto:?subject=I thought you might be interested in" + this.props.course.Title + " course?body=Check out this link https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/" + this.props.course.ID + ".";
+	            var shareLink = "mailto:?subject=I thought you might be interested in" + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/") + this.props.course.ID + ".";
 
 	            return _react2.default.createElement(
 	                "div",
@@ -27628,7 +27628,8 @@
 	        key: "render",
 	        value: function render() {
 
-	            var shareLink = "mailto:?subject=I thought you might be interested in" + this.props.course.Title + " course?body=Check out this link https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/" + this.props.course.ID + ".";
+	            var shareLink = "mailto:?subject=I thought you might be interested in" + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/") + this.props.course.ID + ".";
+
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "category-results" },
