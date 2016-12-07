@@ -45465,7 +45465,7 @@
 	                            width: '100%',
 	                            height: '538px' })
 	                    ),
-	                    this.props.course.Link && _react2.default.createElement(
+	                    this.props.course.Link != 'null' && _react2.default.createElement(
 	                        'a',
 	                        { href: this.props.Link.Url, className: 'view-e-book' },
 	                        'View E-Book'
