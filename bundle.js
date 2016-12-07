@@ -45352,11 +45352,11 @@
 
 	    _createClass(Useful, [{
 	        key: 'usefulCourse',
-	        value: function usefulCourse(event, answer) {
+	        value: function usefulCourse(answer) {
 	            var course = this.props.course;
 
 	            this.props.usefulCourse(answer, course);
-	            event.preventDefault();
+	            answer.preventDefault();
 	        }
 	    }, {
 	        key: 'render',
