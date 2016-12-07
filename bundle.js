@@ -45328,8 +45328,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -45347,7 +45345,7 @@
 	        var _this = _possibleConstructorReturn(this, (Useful.__proto__ || Object.getPrototypeOf(Useful)).call(this, props));
 
 	        _this.state = {
-	            answered: ''
+	            disabled: false
 	        };
 
 	        _this.yes = _this.yes.bind(_this);
@@ -45363,7 +45361,7 @@
 
 	            this.props.usefulCourse(answer, course);
 
-	            this.setState({ answered: 'answered' });
+	            this.setState({ disabled: true });
 
 	            event.preventDefault();
 	        }
@@ -45375,7 +45373,7 @@
 
 	            this.props.usefulCourse(answer, course);
 
-	            this.setState({ answered: 'answered' });
+	            this.setState({ disabled: true });
 
 	            event.preventDefault();
 	        }
@@ -45395,12 +45393,18 @@
 	                    { className: this.state.answered },
 	                    _react2.default.createElement(
 	                        'button',
-	                        _defineProperty({ className: 'yes', onClick: this.no }, 'onClick', this.yes),
+	                        {
+	                            className: 'yes',
+	                            onClick: this.yes,
+	                            disabled: this.state.disabled },
 	                        'Yes'
 	                    ),
 	                    _react2.default.createElement(
 	                        'button',
-	                        _defineProperty({ className: 'no', onClick: this.no }, 'onClick', this.no),
+	                        {
+	                            className: 'no',
+	                            onClick: this.no,
+	                            disabled: this.state.disabled },
 	                        'No'
 	                    )
 	                )
