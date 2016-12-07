@@ -45474,13 +45474,14 @@
 	            var courses = this.props.courses;
 	            var courseID = Number(this.props.params.id);
 	            var rows = [];
+	            var usefulCourse = this.usefulCourse;
 
 	            var filteredCourses = courses.filter(function (item) {
 	                return item.ID == courseID;
 	            });
 
 	            filteredCourses.forEach(function (item, index) {
-	                rows.push(_react2.default.createElement(CourseItem, { course: item, key: item.ID, usefulCourse: this.usefulCourse }));
+	                rows.push(_react2.default.createElement(CourseItem, { course: item, key: item.ID, usefulCourse: usefulCourse }));
 	            });
 
 	            return _react2.default.createElement(
