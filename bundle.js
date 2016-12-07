@@ -47454,7 +47454,6 @@
 
 	        _this2.deleteCourse = _this2.deleteCourse.bind(_this2);
 
-	        _this2.getNewState = _this2.getNewState.bind(_this2);
 	        return _this2;
 	    }
 
