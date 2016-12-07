@@ -47452,6 +47452,8 @@
 	        };
 
 	        _this2.deleteCourse = _this2.deleteCourse.bind(_this2);
+
+	        _this2.getNewState = _this2.getNewState.bind(_this2);
 	        return _this2;
 	    }
 
@@ -47482,6 +47484,11 @@
 	            this.loadData();
 	        }
 	    }, {
+	        key: 'getNewState',
+	        value: function getNewState(items) {
+	            this.setState({ learningPath: items });
+	        }
+	    }, {
 	        key: 'deleteCourse',
 	        value: function deleteCourse(id) {
 	            var items = this.state.learningPath;
@@ -47493,11 +47500,10 @@
 	                ID: id,
 	                completefunc: function completefunc(xData, Status) {
 	                    // remove item from dom
-	                    items.splice(id, 1);
+	                    items = items.splice(id, 1);
+	                    this.getNewState(items);
 	                }
 	            });
-
-	            this.setState({ learningPath: items });
 	        }
 	    }, {
 	        key: 'render',
