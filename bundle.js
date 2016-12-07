@@ -45393,18 +45393,12 @@
 	                    { className: this.state.answered },
 	                    _react2.default.createElement(
 	                        'button',
-	                        {
-	                            className: 'yes',
-	                            onClick: this.yes,
-	                            disabled: this.state.disabled },
+	                        { className: 'yes', onClick: this.yes, disabled: this.state.disabled },
 	                        'Yes'
 	                    ),
 	                    _react2.default.createElement(
 	                        'button',
-	                        {
-	                            className: 'no',
-	                            onClick: this.no,
-	                            disabled: this.state.disabled },
+	                        { className: 'no', onClick: this.no, disabled: this.state.disabled },
 	                        'No'
 	                    )
 	                )
@@ -45428,8 +45422,9 @@
 	        key: 'render',
 	        value: function render() {
 
-	            //if( !null)
-	            console.log(this.props.course.Link);
+	            if (this.props.course.Link != null) {
+	                console.log(this.props.course.Link.Url);
+	            }
 
 	            return _react2.default.createElement(
 	                'div',
