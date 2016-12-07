@@ -47502,9 +47502,10 @@
 
 	            var learningPathItems = [];
 	            var learningPath = this.state.learningPath;
+	            var deleteCourse = this.deleteCourse;
 
 	            learningPath.forEach(function (course, index) {
-	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: course.ID, deleteCourse: this.deleteCourse }));
+	                learningPathItems.push(_react2.default.createElement(CourseItem, { course: course, key: course.ID, deleteCourse: deleteCourse }));
 	            });
 
 	            return _react2.default.createElement(
