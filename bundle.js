@@ -45428,7 +45428,8 @@
 	        key: 'render',
 	        value: function render() {
 
-	            console.log(this.props.course.Link.Url);
+	            //if( !null)
+	            console.log(this.props.course.Link);
 
 	            return _react2.default.createElement(
 	                'div',
