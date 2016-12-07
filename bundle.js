@@ -45243,7 +45243,7 @@
 	                                { className: "lm" },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { href: "#" },
+	                                    { href: "https://blacklightcoza.sharepoint.com/HR%20L&D/SitePages/lm.aspx" },
 	                                    "LM"
 	                                )
 	                            ),
@@ -45261,7 +45261,7 @@
 	                                { className: "multimedia" },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { href: "#" },
+	                                    { href: "https://blacklightcoza.sharepoint.com/HR%20L&D/SitePages/multimedia.aspx" },
 	                                    "Multimedia"
 	                                )
 	                            ),
@@ -45270,7 +45270,7 @@
 	                                { className: "books-articles" },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { href: "#" },
+	                                    { href: "https://blacklightcoza.sharepoint.com/HR%20L&D/SitePages/books.aspx" },
 	                                    "Books & Articles"
 	                                )
 	                            ),
@@ -45454,7 +45454,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'course-desc' },
-	                    this.props.course.Video && _react2.default.createElement(
+	                    this.props.course.Video != null && _react2.default.createElement(
 	                        'div',
 	                        { className: 'image' },
 	                        _react2.default.createElement(_reactPlayer2.default, {
@@ -47477,11 +47477,6 @@
 	                    _react2.default.createElement(
 	                        'ul',
 	                        { className: 'style-none' },
-	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement('a', { href: '#', className: 'shop' })
-	                        ),
 	                        _react2.default.createElement(
 	                            'li',
 	                            null,
