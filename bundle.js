@@ -47404,7 +47404,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var iziToast = __webpack_require__(265);
+	var iziToast = __webpack_require__(264);
 
 	var CourseItem = function (_React$Component) {
 	    _inherits(CourseItem, _React$Component);
@@ -47442,7 +47442,7 @@
 	    }, {
 	        key: 'showNotification',
 	        value: function showNotification() {
-	            iziToast.success({ title: 'OK', message: 'Course removed successfully', position: 'topCenter' });
+	            notificationSuccess();
 	        }
 	    }, {
 	        key: 'render',
@@ -47509,6 +47509,10 @@
 	CourseItem.contextTypes = {
 	    router: _react2.default.PropTypes.object.isRequired
 	};
+
+	function notificationSuccess() {
+	    iziToast.success({ title: 'OK', message: 'Course removed successfully', position: 'topCenter' });
+	}
 
 	var MyLearning = function (_React$Component2) {
 	    _inherits(MyLearning, _React$Component2);
@@ -47681,8 +47685,7 @@
 	exports.default = myLearningPath;
 
 /***/ },
-/* 264 */,
-/* 265 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*
