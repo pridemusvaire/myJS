@@ -27469,9 +27469,9 @@
 	    }, {
 	        key: "showNotification",
 	        value: function showNotification() {
-	            $('.notification').toggle('active');
+	            $('.notification').addClass('active');
 	            setTimeout(function () {
-	                $('.notification').fadeOut('fast');
+	                $('.notification').removeClass('active');
 	            }, 1000);
 	        }
 	    }, {
@@ -27683,9 +27683,9 @@
 	    }, {
 	        key: "showNotification",
 	        value: function showNotification() {
-	            $('.notification').toggle('active');
+	            $('.notification').addClass('active');
 	            setTimeout(function () {
-	                $('.notification').fadeOut('fast');
+	                $('.notification').removeClass('active');
 	            }, 1000);
 	        }
 	    }, {
@@ -47528,9 +47528,9 @@
 	    }, {
 	        key: "showNotification",
 	        value: function showNotification() {
-	            $('.notification').toggle('active');
+	            $('.notification').addClass('active');
 	            setTimeout(function () {
-	                $('.notification').fadeOut('fast');
+	                $('.notification').removeClass('active');
 	            }, 1000);
 	        }
 	    }, {
