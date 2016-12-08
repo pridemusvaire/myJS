@@ -97,6 +97,7 @@
 	var _ = __webpack_require__(243);
 
 	var rootElement = document.getElementById('app');
+	var thisSite = $().SPServices.SPGetCurrentSite();
 
 	/*type item*/
 
@@ -614,7 +615,7 @@
 	        value: function loadData() {
 	            var _this17 = this;
 
-	            var requestUri = "https://blacklightcoza.sharepoint.com/HR%20L%26D/_api/Web/Lists/GetByTitle('hrcourses')/Items";
+	            var requestUri = thisSite + "/_api/Web/Lists/GetByTitle('hrcourses')/Items";
 	            var requestHeaders = {
 	                "accept": "application/json;odata=verbose"
 	            };
@@ -27403,6 +27404,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var thisSite = $().SPServices.SPGetCurrentSite();
+
 	var NotificationAdd = function (_React$Component) {
 	    _inherits(NotificationAdd, _React$Component);
 
@@ -27469,7 +27472,7 @@
 	        key: "render",
 	        value: function render() {
 
-	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
+	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI(thisSite + "/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
 
 	            return _react2.default.createElement(
 	                "div",
@@ -27628,6 +27631,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var thisSite = $().SPServices.SPGetCurrentSite();
+
 	var NotificationAdd = function (_React$Component) {
 	    _inherits(NotificationAdd, _React$Component);
 
@@ -27693,7 +27698,7 @@
 	        key: "render",
 	        value: function render() {
 
-	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
+	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI(thisSite + "/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
 
 	            return _react2.default.createElement(
 	                "div",
@@ -27857,6 +27862,8 @@
 
 	var _ = __webpack_require__(243);
 
+	var thisSite = $().SPServices.SPGetCurrentSite();
+
 	var TrendingItem = function (_React$Component) {
 	    _inherits(TrendingItem, _React$Component);
 
@@ -27952,7 +27959,7 @@
 	                            "div",
 	                            { className: "banner-item" },
 	                            _react2.default.createElement("img", {
-	                                src: "https://blacklightcoza.sharepoint.com/HR L&D/app/asserts/images/banner.jpg",
+	                                src: thisSite + "/app/asserts/images/banner.jpg",
 	                                alt: "" }),
 	                            _react2.default.createElement(
 	                                "div",
@@ -27978,7 +27985,7 @@
 	                            "div",
 	                            { className: "banner-item" },
 	                            _react2.default.createElement("img", {
-	                                src: "https://blacklightcoza.sharepoint.com/HR L&D/app/asserts/images/banner2.jpg",
+	                                src: thisSite + "/app/asserts/images/banner2.jpg",
 	                                alt: "" }),
 	                            _react2.default.createElement(
 	                                "div",
@@ -28004,7 +28011,7 @@
 	                            "div",
 	                            { className: "banner-item" },
 	                            _react2.default.createElement("img", {
-	                                src: "https://blacklightcoza.sharepoint.com/HR L&D/app/asserts/images/banner3.jpg",
+	                                src: thisSite + "/app/asserts/images/banner3.jpg",
 	                                alt: "" }),
 	                            _react2.default.createElement(
 	                                "div",
@@ -45296,6 +45303,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var thisSite = $().SPServices.SPGetCurrentSite();
+
 	var Navigation = function (_React$Component) {
 	    _inherits(Navigation, _React$Component);
 
@@ -45333,7 +45342,7 @@
 	                                { className: "lm" },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { href: "https://blacklightcoza.sharepoint.com/HR%20L&D/SitePages/lm.aspx" },
+	                                    { href: thisSite + "/SitePages/lm.aspx" },
 	                                    "LM"
 	                                )
 	                            ),
@@ -45351,7 +45360,7 @@
 	                                { className: "multimedia" },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { href: "https://blacklightcoza.sharepoint.com/HR%20L&D/SitePages/multimedia.aspx" },
+	                                    { href: thisSite + "/SitePages/multimedia.aspx" },
 	                                    "Multimedia"
 	                                )
 	                            ),
@@ -45360,7 +45369,7 @@
 	                                { className: "books-articles" },
 	                                _react2.default.createElement(
 	                                    "a",
-	                                    { href: "https://blacklightcoza.sharepoint.com/HR%20L&D/SitePages/books.aspx" },
+	                                    { href: thisSite + "/SitePages/books.aspx" },
 	                                    "Books & Articles"
 	                                )
 	                            ),
@@ -47486,6 +47495,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var thisSite = $().SPServices.SPGetCurrentSite();
+
 	var NotificationRemoved = function (_React$Component) {
 	    _inherits(NotificationRemoved, _React$Component);
 
@@ -47554,7 +47565,7 @@
 	        key: "render",
 	        value: function render() {
 
-	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
+	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI(thisSite + "/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
 
 	            return _react2.default.createElement(
 	                "li",
@@ -47638,7 +47649,7 @@
 	        value: function loadData() {
 	            var _this4 = this;
 
-	            var requestUri = "https://blacklightcoza.sharepoint.com/HR%20L%26D/_api/Web/Lists/GetByTitle('myLe" + "arningPath')/Items";
+	            var requestUri = thisSite + "/_api/Web/Lists/GetByTitle('myLe" + "arningPath')/Items";
 	            var requestHeaders = {
 	                "accept": "application/json;odata=verbose"
 	            };
