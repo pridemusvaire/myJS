@@ -47512,6 +47512,7 @@
 
 	function notificationSuccess() {
 	    iziToast.success({ title: 'OK', message: 'Course removed successfully', position: 'topCenter' });
+	    console.log('removed');
 	}
 
 	var MyLearning = function (_React$Component2) {
