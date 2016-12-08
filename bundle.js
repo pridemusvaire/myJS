@@ -27436,7 +27436,6 @@
 
 	        _this2.updateViews = _this2.updateViews.bind(_this2);
 	        _this2.addToLearningPath = _this2.addToLearningPath.bind(_this2);
-	        _this2.showNotification = _this2.showNotification.bind(_this2);
 
 	        return _this2;
 	    }
@@ -27463,27 +27462,18 @@
 	            var courseId = this.props.course.ID;
 
 	            this.props.addToLearningPath(title, desc, type, courseId);
-	            this.showNotification();
+	            this.props.showNotification();
 	            event.preventDefault();
-	        }
-	    }, {
-	        key: "showNotification",
-	        value: function showNotification() {
-	            $('.notification').addClass('active');
-	            setTimeout(function () {
-	                $('.notification').removeClass('active');
-	            }, 1000);
 	        }
 	    }, {
 	        key: "render",
 	        value: function render() {
 
-	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/") + this.props.course.ID + ".";
+	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
 
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "category-results" },
-	                _react2.default.createElement(NotificationAdd, null),
 	                _react2.default.createElement(
 	                    "ul",
 	                    { className: "style-none" },
@@ -27495,7 +27485,8 @@
 	                            { className: "icon" },
 	                            _react2.default.createElement(
 	                                "span",
-	                                { className: this.props.course.CourseType.toLowerCase().replace(/ /g, "-") },
+	                                {
+	                                    className: this.props.course.CourseType.toLowerCase().replace(/ /g, "-") },
 	                                _react2.default.createElement(
 	                                    "span",
 	                                    { className: "toolTip" },
@@ -27554,16 +27545,28 @@
 	    function CategoryView(props) {
 	        _classCallCheck(this, CategoryView);
 
-	        return _possibleConstructorReturn(this, (CategoryView.__proto__ || Object.getPrototypeOf(CategoryView)).call(this, props));
+	        var _this3 = _possibleConstructorReturn(this, (CategoryView.__proto__ || Object.getPrototypeOf(CategoryView)).call(this, props));
+
+	        _this3.showNotification = _this3.showNotification.bind(_this3);
+	        return _this3;
 	    }
 
 	    _createClass(CategoryView, [{
+	        key: "showNotification",
+	        value: function showNotification() {
+	            $('.notification').addClass('active');
+	            setTimeout(function () {
+	                $('.notification').removeClass('active');
+	            }, 1000);
+	        }
+	    }, {
 	        key: "render",
 	        value: function render() {
 
 	            var courses = this.props.courses;
 	            var updateViews = this.props.updateViews;
 	            var addToLearningPath = this.props.addToLearningPath;
+	            var showNotification = this.showNotification;
 
 	            var type = this.props.params.type;
 
@@ -27577,13 +27580,20 @@
 	            var filterText = this.props.filterText;
 	            filteredCourses.forEach(function (course, index) {
 	                if (course.Keywords.toLowerCase().indexOf(filterText) !== -1) {
-	                    rows.push(_react2.default.createElement(CategoryItem, { course: course, key: course.ID, updateViews: updateViews, addToLearningPath: addToLearningPath }));
+	                    rows.push(_react2.default.createElement(CategoryItem, {
+	                        course: course,
+	                        key: course.ID,
+	                        updateViews: updateViews,
+	                        addToLearningPath: addToLearningPath,
+	                        showNotification: showNotification }));
 	                }
 	            });
 
 	            return _react2.default.createElement(
 	                "div",
 	                null,
+	                _react2.default.createElement(NotificationAdd, null),
+	                " ",
 	                rows
 	            );
 	        }
@@ -27651,7 +27661,6 @@
 
 	        _this2.updateViews = _this2.updateViews.bind(_this2);
 	        _this2.addToLearningPath = _this2.addToLearningPath.bind(_this2);
-	        _this2.showNotification = _this2.showNotification.bind(_this2);
 	        return _this2;
 	    }
 
@@ -27677,22 +27686,14 @@
 	            var courseId = this.props.course.ID;
 
 	            this.props.addToLearningPath(title, desc, type, courseId);
-	            this.showNotification();
+	            this.props.showNotification();
 	            event.preventDefault();
-	        }
-	    }, {
-	        key: "showNotification",
-	        value: function showNotification() {
-	            $('.notification').addClass('active');
-	            setTimeout(function () {
-	                $('.notification').removeClass('active');
-	            }, 1000);
 	        }
 	    }, {
 	        key: "render",
 	        value: function render() {
 
-	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/") + this.props.course.ID + ".";
+	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
 
 	            return _react2.default.createElement(
 	                "div",
@@ -27709,7 +27710,8 @@
 	                            { className: "icon" },
 	                            _react2.default.createElement(
 	                                "span",
-	                                { className: this.props.course.CourseType.toLowerCase().replace(/ /g, "-") },
+	                                {
+	                                    className: this.props.course.CourseType.toLowerCase().replace(/ /g, "-") },
 	                                _react2.default.createElement(
 	                                    "span",
 	                                    { className: "toolTip" },
@@ -27768,16 +27770,28 @@
 	    function BriefingView(props) {
 	        _classCallCheck(this, BriefingView);
 
-	        return _possibleConstructorReturn(this, (BriefingView.__proto__ || Object.getPrototypeOf(BriefingView)).call(this, props));
+	        var _this3 = _possibleConstructorReturn(this, (BriefingView.__proto__ || Object.getPrototypeOf(BriefingView)).call(this, props));
+
+	        _this3.showNotification = _this3.showNotification.bind(_this3);
+	        return _this3;
 	    }
 
 	    _createClass(BriefingView, [{
+	        key: "showNotification",
+	        value: function showNotification() {
+	            $('.notification').addClass('active');
+	            setTimeout(function () {
+	                $('.notification').removeClass('active');
+	            }, 1000);
+	        }
+	    }, {
 	        key: "render",
 	        value: function render() {
 
 	            var courses = this.props.courses;
 	            var updateViews = this.props.updateViews;
 	            var addToLearningPath = this.props.addToLearningPath;
+	            var showNotification = this.showNotification;
 
 	            var briefing = this.props.params.briefing;
 
@@ -27789,7 +27803,12 @@
 	            var filterText = this.props.filterText;
 	            filteredCourses.forEach(function (course, index) {
 	                if (course.Keywords.toLowerCase().indexOf(filterText) !== -1) {
-	                    rows.push(_react2.default.createElement(CategoryItem, { course: course, key: course.ID, updateViews: updateViews, addToLearningPath: addToLearningPath }));
+	                    rows.push(_react2.default.createElement(CategoryItem, {
+	                        course: course,
+	                        key: course.ID,
+	                        updateViews: updateViews,
+	                        addToLearningPath: addToLearningPath,
+	                        showNotification: showNotification }));
 	                }
 	            });
 
