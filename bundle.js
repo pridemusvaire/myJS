@@ -47465,10 +47465,10 @@
 	    }, {
 	        key: 'showNotification',
 	        value: function showNotification() {
-	            $('.notification').addClass('active');
-	            setTimeout(function () {
-	                $('.notification').fadeOut('fast');
-	            }, 1000);
+	            $('.notification').toggle('active').fadeOut('fast');
+	            /*setTimeout(function () {
+	                $('.toggle');
+	            }, 1000);*/
 	        }
 	    }, {
 	        key: 'render',
