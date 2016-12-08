@@ -45563,7 +45563,7 @@
 	                this.props.course.Link != null && _react2.default.createElement(
 	                    'a',
 	                    { href: link, className: 'view-e-book', target: '_blank' },
-	                    'Click to View E-Book'
+	                    'Click to View More'
 	                ),
 	                _react2.default.createElement(Useful, { course: this.props.course, usefulCourse: this.props.usefulCourse })
 	            );
@@ -45599,8 +45599,6 @@
 	                    console.log('updated');
 	                }
 	            });
-
-	            console.log(answer, course);
 	        }
 	    }, {
 	        key: 'render',
