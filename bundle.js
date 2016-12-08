@@ -27395,8 +27395,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _notifications = __webpack_require__(266);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27405,19 +27403,42 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var CategoryItem = function (_React$Component) {
-	    _inherits(CategoryItem, _React$Component);
+	var NotificationAdd = function (_React$Component) {
+	    _inherits(NotificationAdd, _React$Component);
+
+	    function NotificationAdd() {
+	        _classCallCheck(this, NotificationAdd);
+
+	        return _possibleConstructorReturn(this, (NotificationAdd.__proto__ || Object.getPrototypeOf(NotificationAdd)).apply(this, arguments));
+	    }
+
+	    _createClass(NotificationAdd, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "notification" },
+	                "Course added to learning path successfully"
+	            );
+	        }
+	    }]);
+
+	    return NotificationAdd;
+	}(_react2.default.Component);
+
+	var CategoryItem = function (_React$Component2) {
+	    _inherits(CategoryItem, _React$Component2);
 
 	    function CategoryItem(props) {
 	        _classCallCheck(this, CategoryItem);
 
-	        var _this = _possibleConstructorReturn(this, (CategoryItem.__proto__ || Object.getPrototypeOf(CategoryItem)).call(this, props));
+	        var _this2 = _possibleConstructorReturn(this, (CategoryItem.__proto__ || Object.getPrototypeOf(CategoryItem)).call(this, props));
 
-	        _this.updateViews = _this.updateViews.bind(_this);
-	        _this.addToLearningPath = _this.addToLearningPath.bind(_this);
-	        _this.showNotification = _this.showNotification.bind(_this);
+	        _this2.updateViews = _this2.updateViews.bind(_this2);
+	        _this2.addToLearningPath = _this2.addToLearningPath.bind(_this2);
+	        _this2.showNotification = _this2.showNotification.bind(_this2);
 
-	        return _this;
+	        return _this2;
 	    }
 
 	    _createClass(CategoryItem, [{
@@ -27462,7 +27483,7 @@
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "category-results" },
-	                _react2.default.createElement(_notifications.NotificationAdd, null),
+	                _react2.default.createElement(NotificationAdd, null),
 	                _react2.default.createElement(
 	                    "ul",
 	                    { className: "style-none" },
@@ -27527,8 +27548,8 @@
 	    router: _react2.default.PropTypes.object.isRequired
 	};
 
-	var CategoryView = function (_React$Component2) {
-	    _inherits(CategoryView, _React$Component2);
+	var CategoryView = function (_React$Component3) {
+	    _inherits(CategoryView, _React$Component3);
 
 	    function CategoryView(props) {
 	        _classCallCheck(this, CategoryView);
@@ -27589,8 +27610,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _notifications = __webpack_require__(266);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27599,18 +27618,41 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var CategoryItem = function (_React$Component) {
-	    _inherits(CategoryItem, _React$Component);
+	var NotificationAdd = function (_React$Component) {
+	    _inherits(NotificationAdd, _React$Component);
+
+	    function NotificationAdd() {
+	        _classCallCheck(this, NotificationAdd);
+
+	        return _possibleConstructorReturn(this, (NotificationAdd.__proto__ || Object.getPrototypeOf(NotificationAdd)).apply(this, arguments));
+	    }
+
+	    _createClass(NotificationAdd, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "notification" },
+	                "Course added to learning path successfully"
+	            );
+	        }
+	    }]);
+
+	    return NotificationAdd;
+	}(_react2.default.Component);
+
+	var CategoryItem = function (_React$Component2) {
+	    _inherits(CategoryItem, _React$Component2);
 
 	    function CategoryItem(props) {
 	        _classCallCheck(this, CategoryItem);
 
-	        var _this = _possibleConstructorReturn(this, (CategoryItem.__proto__ || Object.getPrototypeOf(CategoryItem)).call(this, props));
+	        var _this2 = _possibleConstructorReturn(this, (CategoryItem.__proto__ || Object.getPrototypeOf(CategoryItem)).call(this, props));
 
-	        _this.updateViews = _this.updateViews.bind(_this);
-	        _this.addToLearningPath = _this.addToLearningPath.bind(_this);
-	        _this.showNotification = _this.showNotification.bind(_this);
-	        return _this;
+	        _this2.updateViews = _this2.updateViews.bind(_this2);
+	        _this2.addToLearningPath = _this2.addToLearningPath.bind(_this2);
+	        _this2.showNotification = _this2.showNotification.bind(_this2);
+	        return _this2;
 	    }
 
 	    _createClass(CategoryItem, [{
@@ -27655,7 +27697,7 @@
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "category-results" },
-	                _react2.default.createElement(_notifications.NotificationAdd, null),
+	                _react2.default.createElement(NotificationAdd, null),
 	                _react2.default.createElement(
 	                    "ul",
 	                    { className: "style-none" },
@@ -27720,8 +27762,8 @@
 	    router: _react2.default.PropTypes.object.isRequired
 	};
 
-	var BriefingView = function (_React$Component2) {
-	    _inherits(BriefingView, _React$Component2);
+	var BriefingView = function (_React$Component3) {
+	    _inherits(BriefingView, _React$Component3);
 
 	    function BriefingView(props) {
 	        _classCallCheck(this, BriefingView);
@@ -47419,8 +47461,6 @@
 
 	var _myLearningPath2 = _interopRequireDefault(_myLearningPath);
 
-	var _notifications = __webpack_require__(266);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47429,18 +47469,41 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var CourseItem = function (_React$Component) {
-	    _inherits(CourseItem, _React$Component);
+	var NotificationRemoved = function (_React$Component) {
+	    _inherits(NotificationRemoved, _React$Component);
+
+	    function NotificationRemoved() {
+	        _classCallCheck(this, NotificationRemoved);
+
+	        return _possibleConstructorReturn(this, (NotificationRemoved.__proto__ || Object.getPrototypeOf(NotificationRemoved)).apply(this, arguments));
+	    }
+
+	    _createClass(NotificationRemoved, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "notification" },
+	                "Course removed successfully"
+	            );
+	        }
+	    }]);
+
+	    return NotificationRemoved;
+	}(_react2.default.Component);
+
+	var CourseItem = function (_React$Component2) {
+	    _inherits(CourseItem, _React$Component2);
 
 	    function CourseItem(props) {
 	        _classCallCheck(this, CourseItem);
 
-	        var _this = _possibleConstructorReturn(this, (CourseItem.__proto__ || Object.getPrototypeOf(CourseItem)).call(this, props));
+	        var _this2 = _possibleConstructorReturn(this, (CourseItem.__proto__ || Object.getPrototypeOf(CourseItem)).call(this, props));
 
-	        _this.gotoCourse = _this.gotoCourse.bind(_this);
-	        _this.deleteCourse = _this.deleteCourse.bind(_this);
-	        _this.showNotification = _this.showNotification.bind(_this);
-	        return _this;
+	        _this2.gotoCourse = _this2.gotoCourse.bind(_this2);
+	        _this2.deleteCourse = _this2.deleteCourse.bind(_this2);
+	        _this2.showNotification = _this2.showNotification.bind(_this2);
+	        return _this2;
 	    }
 
 	    _createClass(CourseItem, [{
@@ -47536,27 +47599,27 @@
 	    router: _react2.default.PropTypes.object.isRequired
 	};
 
-	var MyLearning = function (_React$Component2) {
-	    _inherits(MyLearning, _React$Component2);
+	var MyLearning = function (_React$Component3) {
+	    _inherits(MyLearning, _React$Component3);
 
 	    function MyLearning(props) {
 	        _classCallCheck(this, MyLearning);
 
-	        var _this2 = _possibleConstructorReturn(this, (MyLearning.__proto__ || Object.getPrototypeOf(MyLearning)).call(this, props));
+	        var _this3 = _possibleConstructorReturn(this, (MyLearning.__proto__ || Object.getPrototypeOf(MyLearning)).call(this, props));
 
-	        _this2.state = {
+	        _this3.state = {
 	            learningPath: []
 	        };
 
-	        _this2.deleteCourse = _this2.deleteCourse.bind(_this2);
+	        _this3.deleteCourse = _this3.deleteCourse.bind(_this3);
 
-	        return _this2;
+	        return _this3;
 	    }
 
 	    _createClass(MyLearning, [{
 	        key: "loadData",
 	        value: function loadData() {
-	            var _this3 = this;
+	            var _this4 = this;
 
 	            var requestUri = "https://blacklightcoza.sharepoint.com/HR%20L%26D/_api/Web/Lists/GetByTitle('myLe" + "arningPath')/Items";
 	            var requestHeaders = {
@@ -47567,7 +47630,7 @@
 	                contentType: "application/json;odata=verbose",
 	                headers: requestHeaders,
 	                success: function success(data) {
-	                    _this3.setState({ learningPath: data.d.results });
+	                    _this4.setState({ learningPath: data.d.results });
 	                },
 	                error: function error(xhr, status, err) {
 	                    console.log(status, err.to);
@@ -47621,7 +47684,7 @@
 	                    { className: "heading-main" },
 	                    "My Learning Path"
 	                ),
-	                _react2.default.createElement(Notification, null),
+	                _react2.default.createElement(NotificationRemoved, null),
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "category-results" },
@@ -47706,82 +47769,6 @@
 	}];
 
 	exports.default = myLearningPath;
-
-/***/ },
-/* 264 */,
-/* 265 */,
-/* 266 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.NotificationAdd = exports.NotificationRemoved = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var NotificationAdd = function (_React$Component) {
-	    _inherits(NotificationAdd, _React$Component);
-
-	    function NotificationAdd() {
-	        _classCallCheck(this, NotificationAdd);
-
-	        return _possibleConstructorReturn(this, (NotificationAdd.__proto__ || Object.getPrototypeOf(NotificationAdd)).apply(this, arguments));
-	    }
-
-	    _createClass(NotificationAdd, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "notification" },
-	                "Course added to learning path successfully"
-	            );
-	        }
-	    }]);
-
-	    return NotificationAdd;
-	}(_react2.default.Component);
-
-	var NotificationRemoved = function (_React$Component2) {
-	    _inherits(NotificationRemoved, _React$Component2);
-
-	    function NotificationRemoved() {
-	        _classCallCheck(this, NotificationRemoved);
-
-	        return _possibleConstructorReturn(this, (NotificationRemoved.__proto__ || Object.getPrototypeOf(NotificationRemoved)).apply(this, arguments));
-	    }
-
-	    _createClass(NotificationRemoved, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "notification" },
-	                "Course removed successfully"
-	            );
-	        }
-	    }]);
-
-	    return NotificationRemoved;
-	}(_react2.default.Component);
-
-	exports.NotificationRemoved = NotificationRemoved;
-	exports.NotificationAdd = NotificationAdd;
 
 /***/ }
 /******/ ]);
