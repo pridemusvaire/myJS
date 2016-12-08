@@ -47406,18 +47406,41 @@
 
 	var iziToast = __webpack_require__(264);
 
-	var CourseItem = function (_React$Component) {
-	    _inherits(CourseItem, _React$Component);
+	var Notification = function (_React$Component) {
+	    _inherits(Notification, _React$Component);
+
+	    function Notification() {
+	        _classCallCheck(this, Notification);
+
+	        return _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).apply(this, arguments));
+	    }
+
+	    _createClass(Notification, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'notification' },
+	                'Course removed successfully'
+	            );
+	        }
+	    }]);
+
+	    return Notification;
+	}(_react2.default.Component);
+
+	var CourseItem = function (_React$Component2) {
+	    _inherits(CourseItem, _React$Component2);
 
 	    function CourseItem(props) {
 	        _classCallCheck(this, CourseItem);
 
-	        var _this = _possibleConstructorReturn(this, (CourseItem.__proto__ || Object.getPrototypeOf(CourseItem)).call(this, props));
+	        var _this2 = _possibleConstructorReturn(this, (CourseItem.__proto__ || Object.getPrototypeOf(CourseItem)).call(this, props));
 
-	        _this.gotoCourse = _this.gotoCourse.bind(_this);
-	        _this.deleteCourse = _this.deleteCourse.bind(_this);
-	        _this.showNotification = _this.showNotification.bind(_this);
-	        return _this;
+	        _this2.gotoCourse = _this2.gotoCourse.bind(_this2);
+	        _this2.deleteCourse = _this2.deleteCourse.bind(_this2);
+	        _this2.showNotification = _this2.showNotification.bind(_this2);
+	        return _this2;
 	    }
 
 	    _createClass(CourseItem, [{
@@ -47442,13 +47465,16 @@
 	    }, {
 	        key: 'showNotification',
 	        value: function showNotification() {
-	            notificationSuccess();
+	            $('.notification').addClass('active');
+	            setTimeout(function () {
+	                $('.notification').fadeOut('fast');
+	            }, 1000);
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
 
-	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCourse/") + this.props.course.ID + ".";
+	            var shareLink = "mailto:?subject=I thought you might be interested in a " + this.props.course.Title + " course&body=Check out this link " + encodeURI("https://blacklightcoza.sharepoint.com/HR%20L%26D/SitePages/homeApp.aspx#/viewCou" + "rse/") + this.props.course.ID + ".";
 
 	            return _react2.default.createElement(
 	                'li',
@@ -47510,32 +47536,27 @@
 	    router: _react2.default.PropTypes.object.isRequired
 	};
 
-	function notificationSuccess() {
-	    iziToast.success({ title: 'OK', message: 'Course removed successfully', position: 'topCenter' });
-	    console.log('removed');
-	}
-
-	var MyLearning = function (_React$Component2) {
-	    _inherits(MyLearning, _React$Component2);
+	var MyLearning = function (_React$Component3) {
+	    _inherits(MyLearning, _React$Component3);
 
 	    function MyLearning(props) {
 	        _classCallCheck(this, MyLearning);
 
-	        var _this2 = _possibleConstructorReturn(this, (MyLearning.__proto__ || Object.getPrototypeOf(MyLearning)).call(this, props));
+	        var _this3 = _possibleConstructorReturn(this, (MyLearning.__proto__ || Object.getPrototypeOf(MyLearning)).call(this, props));
 
-	        _this2.state = {
+	        _this3.state = {
 	            learningPath: []
 	        };
 
-	        _this2.deleteCourse = _this2.deleteCourse.bind(_this2);
+	        _this3.deleteCourse = _this3.deleteCourse.bind(_this3);
 
-	        return _this2;
+	        return _this3;
 	    }
 
 	    _createClass(MyLearning, [{
 	        key: 'loadData',
 	        value: function loadData() {
-	            var _this3 = this;
+	            var _this4 = this;
 
 	            var requestUri = "https://blacklightcoza.sharepoint.com/HR%20L%26D/_api/Web/Lists/GetByTitle('myLe" + "arningPath')/Items";
 	            var requestHeaders = {
@@ -47546,7 +47567,7 @@
 	                contentType: "application/json;odata=verbose",
 	                headers: requestHeaders,
 	                success: function success(data) {
-	                    _this3.setState({ learningPath: data.d.results });
+	                    _this4.setState({ learningPath: data.d.results });
 	                },
 	                error: function error(xhr, status, err) {
 	                    console.log(status, err.to);
@@ -47600,6 +47621,7 @@
 	                    { className: 'heading-main' },
 	                    'My Learning Path'
 	                ),
+	                _react2.default.createElement(Notification, null),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'category-results' },
