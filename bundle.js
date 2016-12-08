@@ -27556,7 +27556,7 @@
 	        value: function showNotification() {
 	            $('.notification').addClass('active');
 	            setTimeout(function () {
-	                $('.notification').removeClass('active');
+	                $('.notification').fadeOut("slow").removeClass('active');
 	            }, 1000);
 	        }
 	    }, {
@@ -27781,7 +27781,7 @@
 	        value: function showNotification() {
 	            $('.notification').addClass('active');
 	            setTimeout(function () {
-	                $('.notification').removeClass('active');
+	                $('.notification').fadeOut("slow").removeClass('active');
 	            }, 1000);
 	        }
 	    }, {
@@ -47549,7 +47549,7 @@
 	        value: function showNotification() {
 	            $('.notification').addClass('active');
 	            setTimeout(function () {
-	                $('.notification').removeClass('active');
+	                $('.notification').fadeOut("slow").removeClass('active');
 	            }, 1000);
 	        }
 	    }, {
